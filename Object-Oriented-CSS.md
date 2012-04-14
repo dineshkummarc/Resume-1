@@ -1,17 +1,38 @@
 # Object-Oriented CSS
 
-Below is how I am currently structuring my CSS to be more object-oriented (OOCSS) with a little assistence from Sass:
+Below is how I am currently structuring my CSS to be more object-oriented (with a little assistence from Sass):
 
 * Base
 * Variables
-* Mixins (*careful and limited usage*)
-* Extensions (*careful and limited usage*)
+* Mixins (*careful and limited usage* see my [Guide to Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md))
+* Extensions (*careful and limited usage* see my [Guide to Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md))
 * Layout
 * Modules
 * State
 * Theme
 
-Below we discuss the last four items in more detail… 
+##Base
+
+My base file is normally just called `build.css`. 
+
+Within that file I'll `@import` all the stylesheets I need. Normally you wouldn't use `@import` statements because they're bad for page loading performance (they block the loading of other stylesheets and elements on the page - see [Steve Souders](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/) post on this from 2009 for more information).
+
+If you're using Google's `modpagespeed` Apache module on your server then you no longer have to worry about using `@import` because the latest version now flatterns the imports ([See the issue I submitted which resulted in a bug being discovered and fixed](http://code.google.com/p/modpagespeed/issues/detail?id=398&can=1&q=%40import&sort=-status&colspec=ID%20Type%20Status%20Priority%20Milestone%20Modified%20Owner%20Summary)). 
+
+Alternatively if you're using a pre-processor such as [Sass](http://sass-lang.com/) then you'll be able to import stylesheets and leave it up to Sass to automatically flattern them for you (which is what I'm doing in my projects).
+
+```
+// This is our "base"
+@import "normalise";
+
+// Project specific
+@import "variables";
+@import "layout";
+@import "modules";
+@import "state";
+@import "theme";
+```
+Below we'll discuss the last four items (layout, modules, state and theme) in more detail… 
 
 ##Layout
 Divide the page into sections. Layouts hold one or more modules together.
