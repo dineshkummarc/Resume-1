@@ -26,6 +26,9 @@ Alternatively if you're using a pre-processor such as [Sass](http://sass-lang.co
 // This is our "base"
 @import "normalise";
 
+// Miscellaneous helper classes
+@import "helpers";
+
 // Project specific
 @import "variables";
 @import "layout";
