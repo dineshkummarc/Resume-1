@@ -3,9 +3,10 @@
 Below is how I am currently structuring my CSS to be more object-oriented (with a little assistence from Sass):
 
 * Base
-* Variables
-* Mixins (*careful and limited usage* see my [Guide to Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md))
-* Extensions (*careful and limited usage* see my [Guide to Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md))
+* Helpers
+* Variables (see my [Guide to Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md))
+* Mixins (*careful and limited usage* - see my [Guide to Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md))
+* Extensions (*careful and limited usage* - see my [Guide to Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md))
 * Layout
 * Modules
 * State
@@ -33,6 +34,81 @@ Alternatively if you're using a pre-processor such as [Sass](http://sass-lang.co
 @import "theme";
 ```
 Below we'll discuss the last four items (layout, modules, state and theme) in more detail… 
+
+##Helpers
+Modules are re-usable design 'patterns' (such as the ['media object'](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)) where as these helpers (although like modules) are different in that they are re-usable layout utilities.
+
+```
+// ClearFix - http://www.nicolasgallagher.com/micro-clearfix-hack/
+.h-clearfix {
+	zoom:1; // IE6/7
+}
+
+.h-clearfix:before,
+.h-clearfix:after {
+	content: "";
+	display: table;
+}
+
+.h-clearfix:after {
+	clear: both;
+}
+
+// Hoz Block (Horizontal) - http://csswizardry.com/2011/09/the-nav-abstraction/
+.h-hoz {
+	list-style: none;
+	padding-left: 0;
+}
+
+.h-hoz,
+.h-hoz dd {
+	margin-left: 0;
+}
+
+.h-hoz li,
+.h-hoz dt,
+.h-hoz dd {
+	display: inline;
+}
+
+.h-hoz a {
+	display: inline-block;
+}
+
+// Image Replacement - http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.h-hidden {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// Container Block
+.h-container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 10px;
+	max-width: 940px;
+	width: 90%;
+}
+
+// Positioning
+.h-posab {
+	position: absolute;
+}
+
+.h-posrel {
+	position: relative;
+}
+
+.h-alignleft {
+	float: left;
+}
+
+.h-alignright {
+	float: right;
+}
+```
 
 ##Layout
 Divide the page into sections. Layouts hold one or more modules together.
@@ -73,21 +149,20 @@ These are the reusable, modular parts of our design.
     font-size: 85%;
 }
 
-.m-posab {
-    position: absolute;
+// Media Block - http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+.m-media {
+	display: block;
 }
 
-.m-alignleft {
+.m-media-img {
 	float: left;
+	margin-right: 10px;
 }
 
-.m-alignright {
-	float: right;
+.m-media-body {
+	overflow: hidden;
+	margin-bottom: 0;
 }
-
-.m-media {}
-.m-box {}
-.m-strapline {}
 ```
 
 ##State
