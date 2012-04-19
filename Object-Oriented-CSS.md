@@ -94,23 +94,6 @@ Modules are re-usable design 'patterns' (such as the ['media object'](http://www
 	max-width: 940px;
 	width: 90%;
 }
-
-// Positioning
-.h-posab {
-	position: absolute;
-}
-
-.h-posrel {
-	position: relative;
-}
-
-.h-alignleft {
-	float: left;
-}
-
-.h-alignright {
-	float: right;
-}
 ```
 
 ##Layout
