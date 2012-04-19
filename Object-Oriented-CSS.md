@@ -97,7 +97,7 @@ Modules are re-usable design 'patterns' (such as the ['media object'](http://www
 ```
 
 ##Layout
-Divide the page into sections. Layouts hold one or more modules together.
+Divide the page into sections using Layouts. Layouts hold one or more modules together.
 
 **Pattern**
 
@@ -115,7 +115,7 @@ Divide the page into sections. Layouts hold one or more modules together.
 ```
 
 ##Modules
-These are the reusable, modular parts of our design.
+Within a layout section there could be numerous 'modules'. These modules are any container, or related and grouped elements. Modules can also be re-usable patterns such as buttons: which normally have similar styles but then have different 'states' or 'themes' depending on the page they're displayed on.
 
 **Pattern**
 
