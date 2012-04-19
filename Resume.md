@@ -90,6 +90,12 @@ In the past I was very much against the use of pre-processors such as Less/Sass 
 
 I've written a [blog post about Sass](https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md) which goes into more detail as to how it can be used.
 
+**CSS Sprites**
+
+I use CSS image sprites wherever possible as it's more efficient to make one HTTP request for a single large image than multiple (easily twenty or more) HTTP requests for very small images (like graphical buttons, icons etc). 
+
+I know some people find them to be a hassle, but I've never really encountered any issues with using them. Sometimes it's annoying having to make the overall canvas size of the sprite larger just to accommodate an image with awkward dimensions, but I hardly see that as a major concern (the extra white space is negligible).
+
 **Performance Considerations**
 
 There is still a lot to be considered when writing scalable CSS (especially when your project is targeting a mobile device - where bytes and connection speed count). For example, typically (in any project) you'll want to reduce HTTP requests, so you'll combine your CSS into a single file (this is where Sass can be really useful as it helps keep files modular while allowing you to build the result into a single stylesheet) but you don't want to just load all your CSS into a single stylesheet as the majority of it wont be relevant for the current page, so you still need to think about your application and consider having different stylesheet builds for the different areas (again this is something Sass can make a lot easier**)
