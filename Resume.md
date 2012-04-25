@@ -393,6 +393,7 @@ Below I have listed items I think might be of interest. Please be aware that som
 
 Please see the README files for each example for more information…
 
+* [HTML5 Canvas Sliding Image Game](http://integralist.co.uk/HTML5-Image-Slider-Game/)
 * [Card Generator using HTML5 Canvas](https://gist.github.com/1973726) (Gist)
 * [XHR 2.0 Multiple File Upload (with PHP)](http://integralist.co.uk/XHR2-Multiple-File-Upload--with-PHP-/)
     * [+ resize/recolour of images using HTML5 Canvas](https://github.com/Integralist/XHR2-Multiple-File-Upload--with-PHP-/tree/canvas)
