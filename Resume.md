@@ -56,13 +56,21 @@ The bread and butter of any front-end developer. My approach to new projects is 
 
 This process helps me understand the elements that make up the page and gives me a solid plan of action before writing a single line of code.
 
+**Semantic Elements**
+
 I make sure to use semantic elements that suit the content, rather than selecting elements because they're easier to style (yes, I've seen that happen). It's important to understand why I've chosen to use a certain element, otherwise the page will just end up being filled with `<div>`'s and `<p>`'s but no real semantic structure.
+
+**HTML5**
 
 I also use new HTML5 elements wherever possible with the help of [HTML5shiv](https://github.com/aFarkas/html5shiv) for IE < 9 compatibility.
 
 My first proper introduction to HTML5 was via Mark Pilgrim's "Dive into HTML5" (which was then released by O'Reilly as "HTML5 Up and Running"). Following that I started reading [Introducing HTML5](http://introducinghtml5.com/) by Remy Sharp & Bruce Lawson which covers topics such as the new semantic elements, form elements, video/audio, storage facilities, canvas, websockets, cache manifest, geolocation - a lot of useful information.
 
 **Note**: I discovered while working with the `<audio>` element that in some browsers they will refuse to hide these new media elements (`<video>` included) using traditional methods such as `display:none` or positioning offscreen. I consulted with the online community (e.g. twitter/github) and it turned out that I had to incorporate a CSS3 'transform' to trick the browser into displaying the audio element offscreen.
+
+**Style Guide**
+
+I've also written up a [HTML Style Guide](https://github.com/Integralist/Style-Guides/blob/master/HTML%20Style%20Guide.md) which might be of interest in how I currently format my code.
 
 ---
 
@@ -101,6 +109,10 @@ I know some people find them to be a hassle, but I've never really encountered a
 There is still a lot to be considered when writing scalable CSS (especially when your project is targeting a mobile device - where bytes and connection speed count). For example, typically (in any project) you'll want to reduce HTTP requests, so you'll combine your CSS into a single file (this is where Sass can be really useful as it helps keep files modular while allowing you to build the result into a single stylesheet) but you don't want to just load all your CSS into a single stylesheet as the majority of it wont be relevant for the current page, so you still need to think about your application and consider having different stylesheet builds for the different areas (again this is something Sass can make a lot easier**)
 
 ***But if you weren't using Sass then instead this could be achieved by using a custom build script (compiled for example via Apache Ant). Or you could develop a server-side build script that dynamically takes the stylesheets in the page and concatenates/caches them for you (our server does this via the [Google modpagespeed Apache module](http://code.google.com/p/modpagespeed/) - I had written [a basic concatenation script in PHP](http://integralist.co.uk/Mini-Com/) years ago which I had been meaning to re-write to be more flexible but I might try re-writing it in Ruby now - see 'Other skills' for more information as to why).*
+
+**Style Guide**
+
+I've also written up a [CSS Style Guide](https://github.com/Integralist/Style-Guides/blob/master/CSS%20Style%20Guide.md) which might be of interest in how I currently format my code.
 
 ---
 
@@ -150,6 +162,11 @@ Two useful resources for new ECMAScript features is [Juriy Zaytsev](http://perfe
 
 * [ES5](http://kangax.github.com/es5-compat-table/)
 * [ES6](http://kangax.github.com/es5-compat-table/es6/)
+
+**Style Guide**
+
+I've also written up a [JavaScript Style Guide](https://github.com/Integralist/Style-Guides/blob/master/JavaScript%20Style%20Guide.md) which might be of interest in how I currently format my code.
+
 
 **Blog Posts**
 
