@@ -86,6 +86,10 @@ With OOCSS my projects have become simpler, more scalable and much easier to ext
 
 I'm still working on refining how I use OOCSS but for more information on how I'm *currently* structuring my CSS please see my post about [Object-Oriented CSS](https://github.com/Integralist/Resume/blob/master/Object-Oriented-CSS.md) on GitHub
 
+**Responsive Design**
+
+I like to use a 'mobile first' responsive design approach to my website builds now. This means loading stylesheets for mobile devices first and then using Media Queries to load additional stylesheets for larger screens/devices. This means assets specifically for larger devices don't get downloaded onto smaller devices which would struggle to handle them. I also use tricks such as setting `max-width` onto images so they scale appropriately as well as using the `target / context` calculation to convert precision px designs into fluid percentages.
+
 **CSS3**
 
 I like using new CSS3 features wherever possible for more capable browsers. Due to the type of designs (and clients) our agency works with we don't get many chances to do anything too '*funky*', so mostly I use transitions for colour/display changes which gives pages a subtle but slick enhancement. But every now and then we'll be able to throw in a quick animation or transform to give the page an extra edge (**Warning**: on Android devices lower than version 4.0 it would appear that animations are supported but they really only support animations if you're working with a single property! otherwise more than one property will cause the element to disappear).
