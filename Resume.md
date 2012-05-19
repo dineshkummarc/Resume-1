@@ -88,7 +88,19 @@ I'm still working on refining how I use OOCSS but for more information on how I'
 
 **Responsive Design**
 
-I like to use a 'mobile first' responsive design approach to my website builds now. This means loading stylesheets for mobile devices first and then using Media Queries to load additional stylesheets for larger screens/devices. This means assets specifically for larger devices don't get downloaded onto smaller devices which would struggle to handle them. I also use tricks such as setting `max-width` onto images so they scale appropriately as well as using the `target / context` calculation to convert precision px designs into fluid percentages.
+I like to use a 'mobile first' responsive design approach to my website builds now. This means loading stylesheets for mobile devices first and then using Media Queries to load additional stylesheets for larger screens/devices. This means assets specifically for larger devices don't get downloaded onto smaller devices which would struggle to handle them. 
+
+I also use techniques such as:
+
+* Set `font-size` on `body` to `100%` as this translates to `16px` on most browsers.
+* Once `font-size` is set we can use the calculation: 'target / context' to determine the dimensions of other fonts or elements (in either `em` or `%`). This lets me convert precision px designs into more fluid/scalable designs.
+* I also set a `max-width` onto images so they scale appropriately. 
+
+For example, if you have a design with a width of `960px` (and assuming the `font-size` on the `body` has been set to `100%`) then we can make this fluid by running the following calculation:
+
+`960px / 16px = 60em` so we set a `max-width` onto the top level element to be `60em` wide.
+
+**Remember**: when setting percentages you'll need to move the decimal point over two places in the right. So for example if your calculation results in `0.7085` then the percentage value would be `70.85%`.
 
 **CSS3**
 
@@ -436,20 +448,20 @@ My software toolkit:
 * iMac 27" with OSX Lion (at home I use a MacBook Pro)
 * Browser of choice: (at work…) Latest Firefox (at home…) Firefox Aurora
     * Used to be Chrome but I much prefer Firebug than WebKit Dev Tools (amongst other things)
-* Panic Coda (for programming - not really an IDE - just small/quick & more featured than TextMate)
-* Mamp Pro (Local Web Server)
-* Parallels Desktop (for IE testing using [IECollection](http://utilu.com/IECollection/) which is a more accurate representation of IE rendering than IE's `DocumentMode` settings)
+* [Chocolat](http://www.chocolatapp.com/) (for programming - not really an IDE - just small/quick with some nice features built-in)
+* [Mamp Pro](http://www.mamp.info/) (Local Web Server)
+* [Parallels Desktop](http://www.parallels.com/uk/products/desktop/) (for IE testing using [IECollection](http://utilu.com/IECollection/) which is a more accurate representation of IE rendering than IE's `DocumentMode` settings)
 * Adobe Shadow (new tool for testing applications on multiple devices at once)
-* Mou (Markdown editor - which I use for writing blog posts)
+* [Mou](http://mouapp.com/) (Markdown editor - which I use for writing blog posts)
 * [jsperf](http://jsperf.com/) (Any time I need to confirm my suspicions on Js performance)
 * [jsfiddle](http://jsfiddle.net/) (Great for a quick front-end test of code)
-* Transmit (FTP)
+* [Transmit](http://panic.com/transmit/) (FTP)
 * Adobe Illustrator/Fireworks (Design)
-* Domain Brain (Domain/Hosting management)
-* Sparrow (Email)
+* [Domain Brain](http://domainbrainapp.com/) (Domain/Hosting management)
+* [Sparrow](http://sparrowmailapp.com/) (Email)
 * iCal (managing projects and deadlines)
-* ImageOptim (image reduction/optimisation)
-* RegexBuddy (Regular Expressions)
+* [ImageOptim](http://imageoptim.com/) (image reduction/optimisation)
+* [RegexBuddy](http://www.regexbuddy.com/) (Regular Expressions)
 * Google Pagespeed Module (Web Server Optimisations)
 
 ##Inspiration
