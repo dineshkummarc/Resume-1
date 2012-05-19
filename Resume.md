@@ -100,7 +100,7 @@ For example, if you have a design with a width of `960px` (and assuming the `fon
 
 `960px / 16px = 60em` so we set a `max-width` onto the top level element to be `60em` wide.
 
-**Remember**: when setting percentages you'll need to move the decimal point over two places in the right. So for example if your calculation results in `0.7085` then the percentage value would be `70.85%`.
+**Remember**: when setting percentages you'll need to move the decimal point over two places to the right. So for example if your calculation results in `0.7085` then the percentage value would be `70.85%`.
 
 **CSS3**
 
