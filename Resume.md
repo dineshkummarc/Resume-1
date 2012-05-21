@@ -407,24 +407,9 @@ It was this project that made me realise the importance of scalable CSS and what
 
 In the past we've worked with the BBC and the Arts Council, local government and currently do lots of work for the [NHS](http://en.wikipedia.org/wiki/National_Health_Service). 
 
-The last project we built for the NHS was a campaign to stop people going to A&E when it wasn't an emergency: [http://www.notalwaysaande.co.uk/](http://www.notalwaysaande.co.uk/). My involvement was primarily to manage the team developing the website but also was to help guide our front-end developer - who was still early in his JavaScript learning - as to how he could build the relevant map functionality required for this project (which was to display a list of custom locations approx two miles from the users location - along with some other interactions with the map - the user would enter their postcode as part of the search criteria and we'd geo-encode it using Google's Map API).
-
-I mention this NHS project as it ties in with the 'upcoming project' I've listed below.
+One example project we built for the NHS was a campaign to stop people going to A&E when it wasn't an emergency: [http://www.notalwaysaande.co.uk/](http://www.notalwaysaande.co.uk/). My involvement was primarily to manage the team developing the website but also was to help guide our front-end developer - who was still early in his JavaScript learning - as to how he could build the relevant map functionality required for this project (which was to display a list of custom locations approx two miles from the users location - along with some other interactions with the map - the user would enter their postcode as part of the search criteria and we'd geo-encode it using Google's Map API). The JavaScript code isn't as clean as I would have liked it but again, I'm trying to educate my staff and not dictate to them how to write their code (over time they grow to understand how to write their code better - my job is to ensure they don't struggle and give advice and mentoring whenever needed).
 
 ---
-
-**Upcoming project**:
-
-*NHS A&E iPad app*
-
-We were contacted recently on the possibility of taking the A&E campaign website and turning it into an offline application compatible with the iPad.
-
-Next week I will be sitting down and working out how best to implement this, but my initial thoughts were to:
-
-* find out support for [Indexed Database API](http://www.w3.org/TR/IndexedDB/) as it might be needed for certain areas of the site that are dynamically populated by a bespoke CMS.
-* look into the Application Cache Manifest so we can take the content offline
-
-…I'm very much looking forward to this project and having the chance to work out how it should be put together.
 
 ##Examples
 
