@@ -144,7 +144,7 @@ When it comes to code reuse in JavaScript I prefer to stay away from inheritance
 
 **Modular Code**
 
-Up until about 6 months ago, to keep my code clean and modular, I'd use the script loader [LABjs](http://labjs.com/) along side a tiny bootstrap library which would lazy-load any scripts required for the current page. I would have a single namespace and in each script lazy-loaded I would attach the function to the namespace. [See here for an example](https://gist.github.com/2385187).
+Up until around August 2011, to keep my code clean and modular, I was using the script loader [LABjs](http://labjs.com/) along side my own tiny bootstrap library which would lazy-load any scripts required for the current page. I would have a single namespace and in each script lazy-loaded I would attach the function to the namespace. [See here for an example](https://gist.github.com/2385187).
 
 But now I use [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) (Asynchronous Module Definition) for writing more modular code. The two most popular AMD loaders available are [RequireJs](http://requirejs.org) and [Curl](https://github.com/cujojs/curl), and although Curl is (supposedly) faster and has a more modern interface (uses a Promises/Deferred style API) I prefer using RequireJs as it's much cleaner and the build script is very flexible and easy to use. 
 
