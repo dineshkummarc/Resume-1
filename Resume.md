@@ -150,6 +150,16 @@ But now I use [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) (Asynchronous M
 
 [Addy Osmani](https://twitter.com/#!/addyosmani) (now at Google) asked me if he could add [my post on AMD/RequireJs](https://github.com/Integralist/Blog-Posts/blob/master/Beginners-guide-to-AMD-and-RequireJs.md) to the new jQuery learning website which I was very pleased about and was happy to contribute.
 
+**Templating**
+
+With more complicated web applications you need to update certain sections dynamically and this can sometimes require creating HTML code within JavaScript. But this is not a maintainable solution as this can be very messy and not easily extendable.
+
+The solution is to use 'templating'. This is when you keep your HTML inside separate plain text files. You then use a special syntax where you want your content to go. The most typically used syntax is the double curly bracket: `{{ name }}`.
+
+Within JavaScript you can load the template content via XHR and process the template against your data source and then insert the rendered templated into the DOM.
+
+There are many templating languages but I prefer to use [Hogan.js](http://twitter.github.com/hogan.js/) which is modelled on [Mustache](https://github.com/janl/mustache.js#readme).
+
 **Performance and Efficiency**
 
 Whenever writing JavaScript for a large scale application it's important to remember about performance. Normally it's a good to have an idea while you're building your application to write code in such a way that you know you'll be preventing bottlenecks later in the applications life, but this isn't always possible or even the best way to go as some of your performance improvements could be in all the wrong places or could just end up as 'micro optimisations'.
@@ -166,7 +176,7 @@ Good learning material for JavaScript performance is the [JavaScript Performance
 
 My principles are to 'roll my own' wherever possible. I'm not a huge fan of using large frameworks such as jQuery, and I also understand and appreciate the concerns that are raised when people talk about using lots of 'micro-libraries'.
 
-The core things I need to do most of the time is animations (which in itself isn't too difficult, it's just about getting the 'easing' equations right - which there are many available already) and doing XHR based interactions ([here is my ajax script which is heavily based on jQuery](https://github.com/Integralist/Project-Template-Files/blob/master/Assets/Scripts/Utils/XHR/ajax.js)).
+The core things I need to do most of the time is animations (which in itself isn't too difficult, it's just about getting the 'easing' equations right - which there are many available already) and doing XHR based interactions ([here is my ajax script which is heavily based on jQuery](https://github.com/Integralist/Embryo/blob/master/Assets/Scripts/Utils/XHR/ajax.js)).
 
 For animations I like to use the [Morpheus](https://github.com/ded/morpheus) library as it's very flexible and highly optimised.
 
@@ -436,7 +446,7 @@ Please see the README files for each example for more information…
 * [MVC Start-up Kit](http://www.integralist.co.uk/MVC-Start-up-Kit) (jQuery Version)
     * [library agnostic version](https://github.com/Integralist/MVC-Start-up-Kit/tree/library_agnostic)
 * [Robust DOM ready function](http://integralist.co.uk/DOMready/)
-* [Project Template Files](http://integralist.co.uk/Project-Template-Files/)
+* [Embryo (Project Template Files)](http://integralist.co.uk/Embryo/)
 * [integralist.co.uk](https://github.com/Integralist/integralist.github.com) (Utilises Media Queries for resizing content depending on device)
 * [XHRl - AJAX based Script Loader](http://integralist.co.uk/XHRl/)
 * [Tabbed Interface](http://integralist.co.uk/Tabbed-Interface/)
