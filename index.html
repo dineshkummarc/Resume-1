@@ -1,0 +1,592 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mark McDonnell by Integralist</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mark McDonnell</h1>
+        <p>Keen front-end developer who loves technology</p>
+        <p class="view"><a href="https://github.com/Integralist/Resume">View the Project on GitHub <small>Integralist/Resume</small></a></p>
+        <ul>
+          <li><a href="https://github.com/Integralist/Resume/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Integralist/Resume/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Integralist/Resume">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Resume</h1>
+
+<p>This document is quite long, but please do take the time to have a good read through each section, as within I have included additional comments regarding techniques and other points of interest that I've come across while working with different technologies, devices and browsers (especially working within new areas of HTML5 and mobile development).</p>
+
+<p>I feel these are important experiences worth including.</p>
+
+<p>Of course if you have any questions then please just let me know.</p>
+
+<p>Many thanks.<br>
+Mark McDonnell </p>
+
+<hr><ul>
+<li>Bio</li>
+<li>Core skills</li>
+<li>Other skills</li>
+<li>Experience</li>
+<li>Examples</li>
+<li>Software</li>
+<li>Inspiration</li>
+<li>Personal traits</li>
+<li>Interests</li>
+</ul><h2>Bio</h2>
+
+<p>My name is Mark McDonnell, I'm 29 and I work for a creative agency in the South-East of England (I've worked with this agency for just over 11yrs now - as you can see I'm a loyal worker).</p>
+
+<p>I can be found online at the following locations:</p>
+
+<ul>
+<li>
+<a href="http://www.integralist.co.uk/">integralist.co.uk</a><br>
+</li>
+<li>
+<a href="http://www.twitter.com/integralist">twitter.com/integralist</a><br>
+</li>
+<li><a href="https://github.com/integralist">github.com/integralist</a></li>
+</ul><p>The new HTML5 capabilities and mobile solutions available today really excite me. Learning and using new technology is what I'm passionate about and so I'm keen to move forward into these areas as much as possible. The idea of building applications that work across multiple devices is both fun and very refreshing to me.</p>
+
+<p>But most importantly, I just love to learn.</p>
+
+<h2>Core skills</h2>
+
+<p>Below is a short list of technologies I work with (on a daily basis) followed with a more detailed break down of each… </p>
+
+<table>
+<tr>
+<th>Core</th>
+<th>Secondary</th>
+</tr>
+<tr>
+<td>HTML/5</td>
+<td>Regular Expressions</td>
+</tr>
+<tr>
+<td>CSS/3</td>
+<td>Git Version Control</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>Command Line Interface</td>
+</tr>
+</table><h3>HTML</h3>
+
+<p>The bread and butter of any front-end developer. My approach to new projects is to:</p>
+
+<ul>
+<li>print out the designs</li>
+<li>mark-up the different components in pen (I also like to sketch out the page in a notepad)</li>
+<li>think about how I'm going to apply styles (using <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a> patterns)</li>
+</ul><p>This process helps me understand the elements that make up the page and gives me a solid plan of action before writing a single line of code.</p>
+
+<p><strong>Semantic Elements</strong></p>
+
+<p>I make sure to use semantic elements that suit the content, rather than selecting elements because they're easier to style (yes, I've seen that happen). It's important to understand why I've chosen to use a certain element, otherwise the page will just end up being filled with <code>&lt;div&gt;</code>'s and <code>&lt;p&gt;</code>'s but no real semantic structure.</p>
+
+<p><strong>HTML5</strong></p>
+
+<p>I also use new HTML5 elements wherever possible with the help of <a href="https://github.com/aFarkas/html5shiv">HTML5shiv</a> for IE &lt; 9 compatibility.</p>
+
+<p>My first proper introduction to HTML5 was via Mark Pilgrim's "Dive into HTML5" (which was then released by O'Reilly as "HTML5 Up and Running"). Following that I started reading <a href="http://introducinghtml5.com/">Introducing HTML5</a> by Remy Sharp &amp; Bruce Lawson which covers topics such as the new semantic elements, form elements, video/audio, storage facilities, canvas, websockets, cache manifest, geolocation - a lot of useful information.</p>
+
+<p><strong>Note</strong>: I discovered while working with the <code>&lt;audio&gt;</code> element that in some browsers they will refuse to hide these new media elements (<code>&lt;video&gt;</code> included) using traditional methods such as <code>display:none</code> or positioning offscreen. I consulted with the online community (e.g. twitter/github) and it turned out that I had to incorporate a CSS3 'transform' to trick the browser into displaying the audio element offscreen.</p>
+
+<p><strong>Style Guide</strong></p>
+
+<p>I've also written up a <a href="https://github.com/Integralist/Style-Guides/blob/master/HTML%20Style%20Guide.md">HTML Style Guide</a> which might be of interest in how I currently format my code.</p>
+
+<hr><h3>CSS</h3>
+
+<p><strong>Object-Oriented CSS</strong></p>
+
+<p>A few months ago I started looking into ways to make my CSS more flexible and scalable. Via Nicole Sullivan and <a href="http://smacss.com/">Jonathan Snook</a> I discovered the principles of object-oriented CSS (OOCSS).</p>
+
+<p>In short, OOCSS is the separation of layout/structure and skin/themes - taking an object that has repeatable style and turning it into a reusable module.</p>
+
+<p>With OOCSS my projects have become simpler, more scalable and much easier to extend compared to any other style of CSS I've tried in the past.</p>
+
+<p>I'm still working on refining how I use OOCSS but for more information on how I'm <em>currently</em> structuring my CSS please see my post about <a href="https://github.com/Integralist/Resume/blob/master/Object-Oriented-CSS.md">Object-Oriented CSS</a> on GitHub</p>
+
+<p><strong>Responsive Design</strong></p>
+
+<p>I like to use a 'mobile first' responsive design approach to my website builds now. This means loading stylesheets for mobile devices first and then using Media Queries to load additional stylesheets for larger screens/devices. This means assets specifically for larger devices don't get downloaded onto smaller devices which would struggle to handle them. </p>
+
+<p>I also use techniques such as:</p>
+
+<ul>
+<li>Set <code>font-size</code> on <code>body</code> to <code>100%</code> as this translates to <code>16px</code> on most browsers.</li>
+<li>Once <code>font-size</code> is set we can use the calculation: 'target / context' to determine the dimensions of other fonts or elements (in either <code>em</code> or <code>%</code>). This lets me convert precision px designs into more fluid/scalable designs.</li>
+<li>I also set a <code>max-width</code> onto images so they scale appropriately. </li>
+</ul><p>For example, if you have a design with a width of <code>960px</code> (and assuming the <code>font-size</code> on the <code>body</code> has been set to <code>100%</code>) then we can make this fluid by running the following calculation:</p>
+
+<p><code>960px / 16px = 60em</code> so we set a <code>max-width</code> onto the top level element to be <code>60em</code> wide.</p>
+
+<p><strong>Remember</strong>: when setting percentages you'll need to move the decimal point over two places to the right. So for example if your calculation results in <code>0.7085</code> then the percentage value would be <code>70.85%</code>.</p>
+
+<p><strong>CSS3</strong></p>
+
+<p>I like using new CSS3 features wherever possible for more capable browsers. Due to the type of designs (and clients) our agency works with we don't get many chances to do anything too '<em>funky</em>', so mostly I use transitions for colour/display changes which gives pages a subtle but slick enhancement. But every now and then we'll be able to throw in a quick animation or transform to give the page an extra edge (<strong>Warning</strong>: on Android devices lower than version 4.0 it would appear that animations are supported but they really only support animations if you're working with a single property! otherwise more than one property will cause the element to disappear).</p>
+
+<p>Tools like <a href="http://modernizr.com/">Modernizr</a> help provide fallback solutions but there are so many new useful CSS3 features available now that I look forward to the day/project whereby I can utilise these more without having to worry about older browser support.</p>
+
+<p><strong>Pre-Processors</strong></p>
+
+<p>In the past I was very much against the use of pre-processors such as Less/Sass (even more so since discovering OOCSS) because it seemed that developers were using them in a fashion similar to jQuery: where it's a magic black box that just does everything for them and they have no consideration for the resulting stylesheet efficiency. But as long as you know what problems can occur when using a pre-processor (and try to avoid them) then the benefits that it brings can outweigh the negatives and make you much more productive as a result. </p>
+
+<p>I've written a <a href="https://github.com/Integralist/Blog-Posts/blob/master/Guide-to-using-SASS.md">blog post about Sass</a> which goes into more detail as to how it can be used.</p>
+
+<p><strong>CSS Sprites</strong></p>
+
+<p>I use CSS image sprites wherever possible as it's more efficient to make one HTTP request for a single large image than multiple (easily twenty or more) HTTP requests for very small images (like graphical buttons, icons etc). </p>
+
+<p>I know some people find them to be a hassle, but I've never really encountered any issues with using them. Sometimes it's annoying having to make the overall canvas size of the sprite larger just to accommodate an image with awkward dimensions, but I hardly see that as a major concern (the extra white space is negligible).</p>
+
+<p><strong>Performance Considerations</strong></p>
+
+<p>There is still a lot to be considered when writing scalable CSS (especially when your project is targeting a mobile device - where bytes and connection speed count). For example, typically (in any project) you'll want to reduce HTTP requests, so you'll combine your CSS into a single file (this is where Sass can be really useful as it helps keep files modular while allowing you to build the result into a single stylesheet) but you don't want to just load all your CSS into a single stylesheet as the majority of it wont be relevant for the current page, so you still need to think about your application and consider having different stylesheet builds for the different areas (again this is something Sass can make a lot easier**)</p>
+
+<p>**<em>But if you weren't using Sass then instead this could be achieved by using a custom build script (compiled for example via Apache Ant). Or you could develop a server-side build script that dynamically takes the stylesheets in the page and concatenates/caches them for you (our server does this via the <a href="http://code.google.com/p/modpagespeed/">Google modpagespeed Apache module</a> - I had written <a href="http://integralist.co.uk/Mini-Com/">a basic concatenation script in PHP</a> years ago which I had been meaning to re-write to be more flexible but I might try re-writing it in Ruby now - see 'Other skills' for more information as to why).</em></p>
+
+<p><strong>Style Guide</strong></p>
+
+<p>I've also written up a <a href="https://github.com/Integralist/Style-Guides/blob/master/CSS%20Style%20Guide.md">CSS Style Guide</a> which might be of interest in how I currently format my code.</p>
+
+<hr><h3>JavaScript</h3>
+
+<p>I love JavaScript.</p>
+
+<p>If there is one subject I enjoy reading about the most, it's JavaScript. I have so many books from such amazingly talented authors as: <a href="http://shop.oreilly.com/product/9780596806767.do">Stoyan Stefanov</a> (who recommended me to Facebook), <a href="http://eloquentjavascript.net/">Marijn Haverbeke</a>, <a href="http://www.apress.com/programming/javascript/9781590599082">Dustin Diaz</a>, <a href="http://shop.oreilly.com/product/9780596802806.do">Nicholas C. Zakas</a>, <a href="http://shop.oreilly.com/product/0636920018421.do">Alex MacCaw</a>, <a href="http://shop.oreilly.com/product/9780596805531.do">David Flanagan</a>… the list goes on.</p>
+
+<p><strong>Design Patterns for code reuse</strong></p>
+
+<p>When it comes to code reuse in JavaScript I prefer to stay away from inheritance and instead use composition. Take a look at two ways I do this using <a href="https://gist.github.com/1391785"><em>method</em>.call and mixins</a>.</p>
+
+<p><strong>Modular Code</strong></p>
+
+<p>Up until around August 2011, to keep my code clean and modular, I was using the script loader <a href="http://labjs.com/">LABjs</a> along side my own tiny bootstrap library which would lazy-load any scripts required for the current page. I would have a single namespace and in each script lazy-loaded I would attach the function to the namespace. <a href="https://gist.github.com/2385187">See here for an example</a>.</p>
+
+<p>But now I use <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMD</a> (Asynchronous Module Definition) for writing more modular code. The two most popular AMD loaders available are <a href="http://requirejs.org">RequireJs</a> and <a href="https://github.com/cujojs/curl">Curl</a>, and although Curl is (supposedly) faster and has a more modern interface (uses a Promises/Deferred style API) I prefer using RequireJs as it's much cleaner and the build script is very flexible and easy to use. </p>
+
+<p><a href="https://twitter.com/#!/addyosmani">Addy Osmani</a> (now at Google) asked me if he could add <a href="https://github.com/Integralist/Blog-Posts/blob/master/Beginners-guide-to-AMD-and-RequireJs.md">my post on AMD/RequireJs</a> to the new jQuery learning website which I was very pleased about and was happy to contribute.</p>
+
+<p><strong>Templating</strong></p>
+
+<p>With more complicated web applications you need to update certain sections dynamically and this can sometimes require creating HTML code within JavaScript. But this is not a maintainable solution as this can be very messy and not easily extendable.</p>
+
+<p>The solution is to use 'templating'. This is when you keep your HTML inside separate plain text files. You then use a special syntax where you want your content to go. The most typically used syntax is the double curly bracket: <code>{{ name }}</code>.</p>
+
+<p>Within JavaScript you can load the template content via XHR and process the template against your data source and then insert the rendered templated into the DOM.</p>
+
+<p>There are many templating languages but I prefer to use <a href="http://twitter.github.com/hogan.js/">Hogan.js</a> which is modelled on <a href="https://github.com/janl/mustache.js#readme">Mustache</a>.</p>
+
+<p><strong>Performance and Efficiency</strong></p>
+
+<p>Whenever writing JavaScript for a large scale application it's important to remember about performance. Normally it's a good to have an idea while you're building your application to write code in such a way that you know you'll be preventing bottlenecks later in the applications life, but this isn't always possible or even the best way to go as some of your performance improvements could be in all the wrong places or could just end up as 'micro optimisations'.</p>
+
+<p>The best way to check performance of your application is to use some form of script profiler that will analyse your code and feed back information on its call stack and how often certain functions are executed. There are a few different profilers available such as:</p>
+
+<ul>
+<li>dynaTrace AJAX Edition</li>
+<li>Firebug Profiler</li>
+<li>WebKit Developer Tools: Profile</li>
+</ul><p>Good learning material for JavaScript performance is the <a href="http://javascriptrocks.com/performance/">JavaScript Performance Rocks!</a> collection by Thomas Fuchs. I highly recommend it. But also "High Performance Websites" and "Even Faster Websites" by Steve Souders, and lastly "High Performance JavaScript" by Nicholas C. Zakas.</p>
+
+<p><strong>Frameworks</strong></p>
+
+<p>My principles are to 'roll my own' wherever possible. I'm not a huge fan of using large frameworks such as jQuery, and I also understand and appreciate the concerns that are raised when people talk about using lots of 'micro-libraries'.</p>
+
+<p>The core things I need to do most of the time is animations (which in itself isn't too difficult, it's just about getting the 'easing' equations right - which there are many available already) and doing XHR based interactions (<a href="https://github.com/Integralist/Embryo/blob/master/Assets/Scripts/Utils/XHR/ajax.js">here is my ajax script which is heavily based on jQuery</a>).</p>
+
+<p>For animations I like to use the <a href="https://github.com/ded/morpheus">Morpheus</a> library as it's very flexible and highly optimised.</p>
+
+<p>And for asynchronous interactions I like using <a href="https://github.com/cujojs/when">when.js</a> which is a great Promises/Deferred library which can be used both client-side and server-side within NodeJs.</p>
+
+<p><strong>Resources</strong></p>
+
+<p>Two useful resources for new ECMAScript features is <a href="http://perfectionkills.com/">Juriy Zaytsev</a>'s compatibility tables:</p>
+
+<ul>
+<li><a href="http://kangax.github.com/es5-compat-table/">ES5</a></li>
+<li><a href="http://kangax.github.com/es5-compat-table/es6/">ES6</a></li>
+</ul><p><strong>Style Guide</strong></p>
+
+<p>I've also written up a <a href="https://github.com/Integralist/Style-Guides/blob/master/JavaScript%20Style%20Guide.md">JavaScript Style Guide</a> which might be of interest in how I currently format my code.</p>
+
+<p><strong>Blog Posts</strong></p>
+
+<p>Finally, here are a couple of quick posts I have written about JavaScript:</p>
+
+<ul>
+<li><a href="https://github.com/Integralist/Blog-Posts/blob/master/Host-Methods-vs-Native-Methods.md">Host Methods vs Native Methods</a></li>
+<li><a href="https://github.com/Integralist/Blog-Posts/blob/master/JavaScript-Inheritance.md">JavaScript Inheritance</a></li>
+</ul><hr><h3>Regular Expressions</h3>
+
+<p>I really enjoy writing regular expressions. I seem to use them as much for general operating system file/text based requirements as I do in web development. </p>
+
+<p>When used for the web the key is to be as efficient with your regexes as possible and to avoid issues such as <a href="http://www.regular-expressions.info/catastrophic.html">runaway back-tracking</a> which can be devastating to the performance of the regex engine. I use <a href="http://www.regexbuddy.com/">RegexBuddy</a> for analysing back-tracking performance (just a tragedy it's not available for Mac OSX - as I have to fire up a Windows VM whenever I need to use it). Regexes for the web are best written to be small and concise (e.g. two small regexes are better than one overly complicated monolithic one).</p>
+
+<p>The following is a post about <a href="https://github.com/Integralist/Blog-Posts/blob/master/Regex-Popup-Window.md">using JavaScript with Regular Expressions to open external links in a popup window</a> - the regex itself could be improved but for the purpose of the article it was fine.</p>
+
+<p>Also, the regex legend that is <a href="http://blog.stevenlevithan.com/">Steven Levithan</a> released his regex syntax highlighter after <a href="http://blog.stevenlevithan.com/archives/regex-syntax-highlighter">prompted by my interest in it</a> - something I geeked out over obviously :-)</p>
+
+<hr><h3>Git Version Control</h3>
+
+<p>I wrote a post about <a href="https://github.com/Integralist/Blog-Posts/blob/master/How-to-use-Git-and-GitHub.md">how to use Git and GitHub</a> which <a href="http://twitter.com/paul_irish">Paul Irish</a> from the Google Developer team <a href="https://github.com/h5bp/lazyweb-requests/issues/14#issuecomment-701244">shared with the community</a> (as he was looking for this exact type of article as part of his lazy web requests project).</p>
+
+<p>My current employer uses GitHub to host both private and public repos. I'm still a bit green when it comes to using things like sub modules but I'm more than comfortable using Git for version tracking my files locally and doing all the standard remote push/pull/merge commands. </p>
+
+<p>We're still trying to figure the best work-flow between a team of developers (as there appears to be many ways to '<em>skin a cat</em>'). Currently we use GitHub to host our private repositories: we then set-up a <code>dev</code> branch which we <code>pull</code> to our remote server where we test that branch before merging it back into the <code>master</code> branch (the <code>master</code> branch should always be deployable!)</p>
+
+<hr><h3>Command Line Interface</h3>
+
+<p>I use the Terminal on the Mac (which is a <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> shell). </p>
+
+<p>I use the CLI for CSS linting (using <a href="http://csslint.net/">CSSLint</a>), JavaScript linting (using <a href="http://www.jshint.com/">JsHint</a>) as well as connecting to our remote servers via SSH and carrying out basic tweaks and changes (but nothing major as I'm not really a server engineer). </p>
+
+<p>I've written a quick blog post on using <a href="https://github.com/Integralist/Blog-Posts/blob/master/NodeJs-as-a-tool.md">NodeJs as a build tool</a> which explains a little bit on how I use the CLI for things like generating documentation as well as linting CSS/Js.</p>
+
+<h2>Other skills</h2>
+
+<p>Below is a short list of other technologies I have worked with (or do work with) followed by a more detailed break down of each…</p>
+
+<table>
+<tr>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>I'm getting the opportunity to work with on a more regular basis now</td>
+</tr>
+<tr>
+<td>TDD</td>
+<td>I use but not as much as I'd like to in my current role (due to time constraints)</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>Have used lots in the past, but haven't used it fully in a good few years</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>I've built some basic apps using the Sinatra library (Rails is too bloated)</td>
+</tr>
+<tr>
+<td>ActionScript</td>
+<td>I used a fair bit in the past but hate with a passion</td>
+</tr>
+</table><h3>Mobile</h3>
+
+<p>There are a few different mobile options available:</p>
+
+<ul>
+<li>Mobile first</li>
+<li>Mobile friendly website</li>
+<li>Mobile web app</li>
+</ul><p><strong>Mobile first</strong></p>
+
+<p>Mobile first is the preferred solution as it means you only serve stylesheet content for the relevant device dimensions. This means not loading a desktop size stylesheet for a mobile device which means extra bandwidth required for the mobile device downloading content it will never use.</p>
+
+<p>The way to do this is to have a 'base' stylesheet for mobile devices and to then use Media Queries to load additional stylesheets for each screen dimension required which overwrite those base rules. Then for browsers such as Internet Explorer that do not understand Media Queries you would wrap the 'desktop' stylesheet in a conditional comment (e.g. <code>&lt;!--[if lt IE 9]&gt;</code>) so that for IE browsers they would still get the desktop experience.</p>
+
+<p>See a basic example of this (via my GitHub account) with the project: "<a href="http://integralist.co.uk/Mobile-First-Desktop-Second/">Mobile First, Desktop Second</a>".</p>
+
+<p><strong>Mobile friendly website</strong></p>
+
+<p>This solution is not as good as the 'mobile first' approach but is better than nothing. The idea is that once your website has been developed you then use Media Queries to load additional stylesheets to overwrite certain rules so when your website is viewed on a smaller screen the different page elements are either shifted into a more linear layout, resized or just hidden altogether. I use this approach on my website <a href="http://www.integralist.co.uk/">www.integralist.co.uk</a></p>
+
+<p><strong>Mobile web app</strong></p>
+
+<p>The last solution is to make your website look and function more like a 'native' app, but only for mobile based devices. So if the user is visiting your site on their desktop computer then they'll notice no difference. But if they are visiting using a mobile or tablet device then they'll be automatically redirected to your 'web app' which is designed specifically to look more like a 'native' app and should also have more 'app' like functionality compared to your normal website. This solution isn't appropriate for all clients because it depends on their product and what the user can do when visiting their site.</p>
+
+<p><strong>Difficulties with each of these mobile 'solution'</strong></p>
+
+<p>For 'mobile first' the main issue is how do you handle loading images? This sounds simple enough but in practice there currently doesn't appear to be a perfect solution. A couple of work arounds could be to: </p>
+
+<ul>
+<li>load the full size image and using <code>max-width:100%</code> to help the images scale to the device dimensions (but then you're loading very large images on a small bandwidth device).</li>
+<li>use a server-side script to specify the full sized image be set in a HTML5 <code>data-attribute</code> and then you can use JavaScript to load the relevant image depending on the device dimensions (but then you're relying on JavaScript to be available which might not be the case on every device).</li>
+</ul><p>For 'mobile friendly websites' the issue is that again a small bandwidth device is having to download the full site assets (images/stylesheets/javascript).</p>
+
+<p>For 'mobile web apps' there is the tricky process of determining: when should the user be directed to the website or the web app? Again there currently are no perfect solutions. There are a few different techniques that attempt to work around this issue and the one I prefer (the lesser of all evils) involves using JavaScript to determine screen dimensions and then redirecting the user to the web app where the server-side sets a cookie to remember the user. The flaws with this solution is that JavaScript and cookies are required. But the alternatives require browser sniffing and/or checking the browser's user-agent against a database of devices (which is a fragile '<em>solution</em>' to say the least).</p>
+
+<p>Each of these issues have a multitude of potential work arounds, but which one to use depends on the project requirements and timescales.</p>
+
+<p><strong>Current work flow</strong></p>
+
+<p>The agency I work for currently doesn't take a 'mobile first' approach unless we've already had an agreement from the client to do so (usually clients prefer not to take this route as it means extra design and programming time/costs - so they'll normally decide to take the 'mobile friendly' approach).</p>
+
+<p>Working for mobile has been made easier through my research and use of:</p>
+
+<ul>
+<li>OOCSS (e.g. <a href="http://smacss.com/book/">Scalable and Modular Architecture for CSS</a>)</li>
+<li><a href="http://www.abookapart.com/products/responsive-web-design">Responsive Design</a></li>
+<li><a href="http://www.pcpro.co.uk/blogs/2012/03/20/adobe-shadow-a-free-way-to-test-mobile-sites/">Adobe Shadow</a></li>
+<li>
+<a href="http://html5mobilepro.com/">HTML5 Mobile Pro</a> (which I've not completed reviewing yet)</li>
+</ul><hr><h3>TDD (Test-Driven Development)</h3>
+
+<p>I like the philosophy behind <a href="https://en.wikipedia.org/wiki/Test-driven_development">TDD</a> but I mostly end up writing 'unit-testing' code rather than actually doing TDD. This is because I don't have the luxury of time in my current role to spend designing out an API, it's a very fast pace office which requires code to be written and working without delay (which is unfortunately typical of a lot of agencies). But I understand the concepts &amp; the benefits, and very much believe TDD to be a great way to design and build your code.</p>
+
+<p>I've written a blog post about <a href="https://github.com/Integralist/Blog-Posts/blob/master/Beginners-guide-on-how-to-test-your-code-%28using-Jasmine-BDD%29.md">using the BDD testing framework Jasmine</a> - this was before I found <a href="http://busterjs.org/">BusterJs</a> which is just an amazing TDD framework that is run via command line where it sets up a localhost and you can attach different browsers as 'slaves' for it to test against (similar to how the jsTestDriver framework worked - which I tried out years ago back when I used MSFT Windows). </p>
+
+<hr><h3>PHP</h3>
+
+<p>I used to do a fair bit of PHP a few years ago. I learnt about object-oriented programming and ended up building some basic Content Management Systems. But I haven't written anything other than basic quick PHP scripts for years. See <a href="http://integralist.co.uk/Mini-Com/">this basic PHP JavaScript/CSS minification script</a> I wrote.</p>
+
+<p>As far as aesthetic are concerned it has to be said that PHP is fugly as hell (but that's just my personal opinion). </p>
+
+<p>I find the 'HipHop for PHP' (PHP into C++) compiler Facebook has written to be an interesting way to improve performance of the language, but regardless I'm not a huge fan of PHP (as far as writing it is concerned) especially since being introduced to <a href="http://www.ruby-lang.org/en/">Ruby</a>.</p>
+
+<hr><h3>Ruby</h3>
+
+<p>I started learning Ruby because I wanted to understand the concepts behind CoffeeScript and the new functional features in ES5 (and more so in ES6). I've since written a <a href="https://github.com/Integralist/Blog-Posts/blob/master/Introduction-to-Ruby.md">blog post about Ruby</a> and my thoughts on it so far.</p>
+
+<p>I've also set-up a GitHub repo which uses the Ruby library <a href="http://www.sinatrarb.com/">Sinatra</a> to create a template project which I've called <a href="https://github.com/Integralist/Passage">Passage</a> (which is just a play on words for 'routing' which Sinatra is most famous for).</p>
+
+<p>Although I'm not a server-side developer, I think I've fallen in love with the language and so I'm looking forward to learning more about it (and getting to use it) in the future. At the very least it'll make understanding the CoffeeScript syntax a lot easier!</p>
+
+<hr><h3>ActionScript</h3>
+
+<p>I used to use the ActionScript 3.0 language quite a bit a few years ago (before HTML5 and JavaScript blew up and Apple had driven a stake through the heart of Flash on mobile).</p>
+
+<p>I'm mentioning my use of AS3 simply because every now and then Flash makes a recurrence in my life. For example, in the last web application I worked on we needed to use a 3rd party ActionScript library for recording a user's microphone input. This was so the user could attach audio to their profile as a way to introduce themselves to other users.</p>
+
+<p>Personally I hate writing Flash applications and I hope I never have to deal with it again :-)</p>
+
+<h2>Experience</h2>
+
+<p>With my current employer (who I've been with for the last 11yrs) I have worked my way up the ranks from a junior front-end developer (who at the time knew nothing other than how to use Macromedia's DreamWeaver 3!) to head of our Digital Media Department. I'm completely self taught/driven. My interest in programming, technology and the love of learning new things is what has gotten me to where I am today.</p>
+
+<p><strong>Management &amp; Programming</strong></p>
+
+<p>For the last (almost) two years I've taken up a management role where I look after a team of three developers (two back-end and one front-end). </p>
+
+<p>I still write code on a daily basis, but most of the time it's helping the team with any problems they have (specifically the front-end, although having back-end knowledge sometimes allows me to throw a new perspective at a problem which has then helped the team locate the issue and implement an appropriate solution).</p>
+
+<p>I had hoped this role would've given me a chance to write more experimental code and learn new technologies (something I just didn't have time for before), unfortunately management brings both benefits and its own struggles, and so I still do not have the time to play with new things as much as I would like to. </p>
+
+<p>This role has been a much more enlightening experience than I could have imagined (it's hard to balance how you handle your own work load and also keep a separate team afloat, all without hovering over their shoulders in a panic about whether jobs are getting done in time and to an acceptable standard). Having trust in your team is critical.</p>
+
+<hr><p><strong>My Team</strong></p>
+
+<p>My team was effectively all juniors who (like me, they have learnt the majority of their skills off their own hard work) have benefited from my direction and experience, so they have been able to improve their own skills much faster than if left on their own.</p>
+
+<p>Our two back-end developers have now written their own light-weight MVC based Content Management System frameworks - which work very nicely - and so I'm very proud of them both, considering they came to me with nothing but procedural/spaghetti code. </p>
+
+<p>Our front-end developer was much the same - coming to us with basic HTML and CSS skills but (being young and from a generation that has grown up with the web at their finger tips) he had interests in all the right technologies and so it was easier for me to guide him (especially as I'm a front-end developer myself as it made it easier to share specific parts of my knowledge and experience).</p>
+
+<hr><p><strong>Small Company = Hard Work</strong></p>
+
+<p>Working for a small creative agency is actually very difficult because there is no way to get 'lost in the crowd' which can happen in bigger companies. You also have greater responsibility over a much wider area. In larger companies, a developer is just a developer, a manager is just a manager and their roles don't usually cross over. But when there are less people working for the company, that changes things, and so for the company to succeed every employee needs to take a pro-active interest in what goes on.</p>
+
+<hr><p><strong>My role currently involves</strong>:</p>
+
+<ul>
+<li>Programming
+
+<ul>
+<li>front-end of websites</li>
+<li>prototyping more unique functionality</li>
+</ul>
+</li>
+<li>Managing 'Digital Media' Department
+
+<ul>
+<li>Delegating work to staff (programmers)</li>
+<li>Ensuring work is done on time</li>
+<li>Helping with any questions or issues they have</li>
+<li>Dealing with clients</li>
+<li>Looking after invoicing</li>
+<li>Looking after dedicated web server
+
+<ul>
+<li>We use UKFast as our server provider and so their engineers look after the physical running of the server, but I SSH on to the server on a regular basis and check resource usage, error logs, install/update modules (such as the <a href="https://developers.google.com/speed/pagespeed/mod">Google Pagespeed Module</a>) and things of that nature.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Project Manager
+
+<ul>
+<li>Meeting with clients and understanding requirements</li>
+<li>Booking in work with different departments (creative, copy writing)</li>
+<li>Creating schematics/architecture of application</li>
+</ul>
+</li>
+</ul><hr><p><strong>Mobile applications</strong>:</p>
+
+<p>With regards to Mobile development, we've developed a couple of web applications using jQuery Mobile (unfortunately these aren't released to the public yet) and although they work very well and the choice to use jQuery Mobile was valid (we had a seriously tight deadline for both + the team were new to mobile development and the client's own requirements were to target as many devices as possible), I'm personally a bit disappointed we didn't have more time to consider other options. </p>
+
+<p>I would have preferred to have either gone down a 'home grown' route or at least used a much more lightweight solution such as <a href="http://zeptojs.com/">ZeptoJs</a> (which was designed with mobile in mind) - and that way we could have written our own much slimmer CSS/Js and had cleaner structured HTML (I'm planning on setting aside some time soon to build a test application using ZeptoJs and writing up my findings in a separate blog post).</p>
+
+<hr><p><strong>My last programming project</strong>:</p>
+
+<p>My last big <em>programming</em> project (which is currently in client testing phase) was a very large scale social network web application which I developed the front-end for (and a majority of the JavaScript interactions). </p>
+
+<p>I worked along side a freelance back-end PHP developer who handled the JavaScript XHR'ing of data back and forth. But we worked together on solutions for how to handle server load more efficiently. One such item we worked on was how to fake 'push notifications'. To do this we decided that we wouldn't do the traditional 'polling' method (where you have a set interval of when to call the server for information), we would instead track the users mouse movement on a set interval and increase the length of the delay depending on the lack of change in the data sent from the server. </p>
+
+<p>So for example, when the user moved their mouse we would send a call to the server. We would then set a timer to check the mouse move event in 30 seconds time. If the user moved their mouse again after 30 seconds then we'd again call the server, but additionally we would check if the data from the server had changed at all. If it hadn't changed then we would reset the timer to be longer than 30 seconds before calling the server again.</p>
+
+<p>This particular project has been going on for about two years now - the last year has been working on the web application itself - after spending almost a year on building an initial mock website along with planning documents and drawing up schematics for the front-end as well as the different user management systems required for this application (a very lengthy procedure).</p>
+
+<p>It was this project that made me realise the importance of scalable CSS and what spurred me to investigate OOCSS further and now to have incorporated it into my work flow.</p>
+
+<hr><p><strong>Clients:</strong></p>
+
+<p>In the past we've worked with the BBC and the Arts Council, local government and currently do lots of work for the <a href="http://en.wikipedia.org/wiki/National_Health_Service">NHS</a>. </p>
+
+<p>One example project we built for the NHS was a campaign to stop people going to A&amp;E when it wasn't an emergency: <a href="http://www.notalwaysaande.co.uk/">http://www.notalwaysaande.co.uk/</a>. My involvement was primarily to manage the team developing the website but also was to help guide our front-end developer - who was still early in his JavaScript learning - as to how he could build the relevant map functionality required for this project (which was to display a list of custom locations approx two miles from the users location - along with some other interactions with the map - the user would enter their postcode as part of the search criteria and we'd geo-encode it using Google's Map API). The JavaScript code isn't as clean as I would have liked it but again, I'm trying to educate my staff and not dictate to them how to write their code (over time they grow to understand how to write their code better - my job is to ensure they don't struggle and give advice and mentoring whenever needed).</p>
+
+<hr><h2>Examples</h2>
+
+<p>Because of the management role I've been in for the past (almost…) 2yrs, I do not have a huge back log of what you would call 'full blown' examples (e.g. websites/applications that I've worked a large portion on).</p>
+
+<p>My last big programming project was a social network web application, but as that is not yet public I'm unable to provide much more information (other than what I've detailed above within the "Experience" section) as to what that project entailed, or more importantly: code examples. </p>
+
+<p>Below I have listed items I think might be of interest. Please be aware that some of these examples were put together quite quickly (either me testing some new technology or as a quick prototype for work):</p>
+
+<p>Please see the README files for each example for more information…</p>
+
+<ul>
+<li><a href="http://integralist.co.uk/HTML5-Image-Slider-Game/">HTML5 Canvas Sliding Image Game</a></li>
+<li>
+<a href="https://gist.github.com/1973726">Card Generator using HTML5 Canvas</a> (Gist)</li>
+<li>
+<a href="http://integralist.co.uk/XHR2-Multiple-File-Upload--with-PHP-/">XHR 2.0 Multiple File Upload (with PHP)</a>
+
+<ul>
+<li><a href="https://github.com/Integralist/XHR2-Multiple-File-Upload--with-PHP-/tree/canvas">+ resize/recolour of images using HTML5 Canvas</a></li>
+</ul>
+</li>
+<li><a href="http://integralist.co.uk/Mobile-First-Desktop-Second/">Mobile First, Desktop Second</a></li>
+<li>
+<a href="https://gist.github.com/1710256">Google Maps with Geolocation + HTML5 Audio + Google Places</a> (Gist)</li>
+<li><a href="http://integralist.co.uk/HTML5-History-API/">HTML5 History API</a></li>
+<li>
+<a href="http://www.integralist.co.uk/MVC-Start-up-Kit">MVC Start-up Kit</a> (jQuery Version)
+
+<ul>
+<li><a href="https://github.com/Integralist/MVC-Start-up-Kit/tree/library_agnostic">library agnostic version</a></li>
+</ul>
+</li>
+<li><a href="http://integralist.co.uk/DOMready/">Robust DOM ready function</a></li>
+<li><a href="http://integralist.co.uk/Embryo/">Embryo (Project Template Files)</a></li>
+<li>
+<a href="https://github.com/Integralist/integralist.github.com">integralist.co.uk</a> (Utilises Media Queries for resizing content depending on device)</li>
+<li><a href="http://integralist.co.uk/XHRl/">XHRl - AJAX based Script Loader</a></li>
+<li><a href="http://integralist.co.uk/Tabbed-Interface/">Tabbed Interface</a></li>
+</ul><h2>Software</h2>
+
+<p>My software toolkit:</p>
+
+<ul>
+<li>iMac 27" with OSX Lion (at home I use a MacBook Pro)</li>
+<li>Browser of choice: (at work…) Latest Firefox (at home…) Firefox Aurora
+
+<ul>
+<li>Used to be Chrome but I much prefer Firebug than WebKit Dev Tools (amongst other things)</li>
+</ul>
+</li>
+<li>
+<a href="http://panic.com/coda/">Coda 2.0</a> (for programming - not really an IDE - just small/quick with some nice features built-in)</li>
+<li>
+<a href="http://www.mamp.info/">Mamp Pro</a> (Local Web Server)</li>
+<li>
+<a href="http://www.parallels.com/uk/products/desktop/">Parallels Desktop</a> (for IE testing using <a href="http://utilu.com/IECollection/">IECollection</a> which is a more accurate representation of IE rendering than IE's <code>DocumentMode</code> settings)</li>
+<li>Adobe Shadow (new tool for testing applications on multiple devices at once)</li>
+<li>
+<a href="http://mouapp.com/">Mou</a> (Markdown editor - which I use for writing blog posts)</li>
+<li>
+<a href="http://jsperf.com/">jsperf</a> (Any time I need to confirm my suspicions on Js performance)</li>
+<li>
+<a href="http://jsfiddle.net/">jsfiddle</a> (Great for a quick front-end test of code)</li>
+<li>
+<a href="http://panic.com/transmit/">Transmit</a> (FTP)</li>
+<li>Adobe Illustrator/Fireworks (Design)</li>
+<li>
+<a href="http://domainbrainapp.com/">Domain Brain</a> (Domain/Hosting management)</li>
+<li>
+<a href="http://sparrowmailapp.com/">Sparrow</a> (Email)</li>
+<li>iCal (managing projects and deadlines)</li>
+<li>
+<a href="http://imageoptim.com/">ImageOptim</a> (image reduction/optimisation)</li>
+<li>
+<a href="http://www.regexbuddy.com/">RegexBuddy</a> (Regular Expressions)</li>
+<li>Google Pagespeed Module (Web Server Optimisations)</li>
+</ul><h2>Inspiration</h2>
+
+<p>There are quite a few places I get inspiration from:</p>
+
+<ul>
+<li>Twitter<br><em>A few people who share great information</em>:
+
+<ul>
+<li><a href="http://twitter.com/jdalton">@jdalton</a></li>
+<li><a href="http://twitter.com/kangax">@kangax</a></li>
+<li><a href="http://twitter.com/mathias">@mathias</a></li>
+<li><a href="http://twitter.com/kitcambridge">@kitcambridge</a></li>
+<li><a href="http://twitter.com/angusTweets">@angusTweets</a></li>
+<li><a href="http://twitter.com/WebReflection">@WebReflection</a></li>
+<li><a href="http://twitter.com/thomasfuchs">@thomasfuchs</a></li>
+</ul>
+</li>
+<li>GitHub</li>
+<li>Newsletters
+
+<ul>
+<li>Design Festival Newsletter</li>
+<li>RubySource Newsletter</li>
+<li>BuildMobile Newsletter</li>
+<li>PHPMaster Newsletter</li>
+<li>SitePoint Newsletter </li>
+<li>Js/CSS/Dart Weekly</li>
+<li>Web Designer Depot</li>
+</ul>
+</li>
+<li>HTML5 boilerplate<br>
+(initially just the <code>.htaccess</code> file I found useful - we incorporated quite a few of the tweaks on our own remote server - but I'm going to be taking a look through their build script (when I get the chance) to see if there is anything I can take from it that will help make me more productive)</li>
+</ul><h2>Personal traits</h2>
+
+<ul>
+<li>Loyal</li>
+<li>Hard Working</li>
+<li>Patient</li>
+<li>Humble</li>
+</ul><h2>Interests</h2>
+
+<p>I love to learn, my main two interests are programming and <a href="https://en.wikipedia.org/wiki/Integral_Theory">Integral Theory</a>.</p>
+
+<p>Otherwise in any spare time I happen to get I'll be:</p>
+
+<ul>
+<li>Doing/watching martial arts</li>
+<li>Reading</li>
+<li>Listening to music<br>
+(I'm a bit odd in that I love all music genres: metal, house/dance, classical, acoustic, pop - the list goes on…)</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Integralist">Integralist</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
